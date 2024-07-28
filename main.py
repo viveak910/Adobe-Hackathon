@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+
 def read_csv(csv_path):
     np_path_XYs = np.genfromtxt(csv_path , delimiter=',')
     path_XYs = []

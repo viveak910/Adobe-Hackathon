@@ -1,9 +1,6 @@
 import numpy as np
 from main import read_csv,plot
 
-
-
-
 def normalize_data(data):
  
   normalized_data = []
@@ -18,17 +15,11 @@ def normalize_data(data):
 # Example usage
 data = normalize_data(read_csv("isolated.csv"))#varin
 
-
-
-
-
-
 def remove_outliers_zscore(data, threshold=3):
   z_scores = np.abs((data - np.mean(data, axis=0)) / np.std(data, axis=0))
   filtered_data = data[np.all(z_scores < threshold, axis=1)]
   return filtered_data
 
-# Example usage
 cleaned_data = []
 for shape in data:
   shape_array = shape[0]  # Assuming shape is a list with one array
